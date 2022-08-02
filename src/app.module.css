@@ -1,0 +1,57 @@
+.main-container {
+  max-width: 80%;
+
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.main-container>section {
+  margin-top: 4rem;
+  position: relative;
+}
+
+.img-edit-container {
+  position: relative;
+  display: flex;
+  height: 100%;
+  user-select: none;
+}
+
+.img-edit-container.expand {}
+
+.original-img {
+  width: 100%;
+}
+
+.resizer-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.resizer-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.5rem;
+  border: none;
+  border-left: 0.3rem solid rgba(250, 250, 250, 0.397);
+  background: transparent;
+  height: 100%;
+  z-index: 2;
+  cursor: e-resize;
+  transition: left 0.2rem;
+}
+
+.resizer-bar.left {
+  /* transform: translateX(-0.25rem); */
+}
+
+.resizer-bar.right {
+  left: auto;
+  right: 0;
+}
